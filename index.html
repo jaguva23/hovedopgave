@@ -232,10 +232,33 @@
         <input type="search" placeholder="Søg" class="input" onkeyup="search(this.value)">
       </div>
 
-      <div class="filter input-container">
-        <label for="search" class="xsmall-text">Filtre</label>
-        <input type="search" placeholder="Søg" class="input" onkeyup="search(this.value)">
+      <div class="filter">
+                <label for="filterParti">
+                    <select id="filterparti" onchange="filterParti(this.value)">
+                        <option value="all" selected>Parti</option>
+                        <option value="socialdemokratiet">Socialdemokratiet (A)</option>
+                        <option value="konservative">Konservative (C)</option>
+                        <option value="radikale-venstre">Radikale Venstre (B)</option>
+                        <option value="dansk-folkeparti">Dansk Folkeparti (O)</option>
+                        <option value="enhedslisten">Enhedslisten (Ø)</option>
+                        <option value="venstre">Venstre (V)</option>
+                    </select>
+                </label>
+                <label for="filterUdvalg">
+                  <select id="filterUdvalg" onchange="filterUdvalg(this.value)">
+                      <option value="all" selected>Udvalg</option>
+                      <option value="boern-og-unge">Børn- og ungeudvalget</option>
+                      <option value="kultur">Kulturudvalget</option>
+                      <option value="social-og-beskaeftigelse">Social- og beskæftigelsesudvalget</option>
+                      <option value="sundhed-og-omsorg">Sundheds- og omsorgsudvalget</option>
+                      <option value="teknisk">Tekniskudvalget</option>
+                      <option value="oekonomi">Økonomiudvalget</option>
+                    </select>
+              </label>
       </div>
+
+      <article id="medlemmer-container">
+      </article>
     </section>
   
 

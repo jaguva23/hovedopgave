@@ -218,6 +218,10 @@ header img {
   width: 300px;
 }
 
+.filter {
+  margin-top: 32px;
+}
+
 
 .input {
   border: 1px solid #003253;
@@ -385,4 +389,21 @@ height: 96px;
   box-shadow: 0px 6px 5px 0px #0000001A;
   box-shadow: 0px 8px 15px 0px #0000001A;
   cursor: pointer;
+}
+
+/*-------Medlemmer----------*/
+.politiker-kort {
+  border: 1px solid #003253;
+  border-radius: 4px;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.politiker-kort-tekst {
+  padding: 8px;
+  background-color: var(--white);
+}
+.politiker-kort-tekst img {
+  width: 80px;
+  height: 80px;
 }
