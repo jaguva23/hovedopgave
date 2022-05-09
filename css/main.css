@@ -26,7 +26,7 @@ body {
 
 header {
   width: 100%;
-  height: 48px;
+  height: 56px;
   position: fixed;
   z-index: 99;
   background-color: var(--blue);
@@ -95,10 +95,10 @@ font-size: 10px;
 line-height: 15px;
 }
 
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 48px; }
+.material-icons-outlined.md-18 { font-size: 18px; }
+.material-icons-outlined.md-24 { font-size: 24px; }
+.material-icons-outlined.md-36 { font-size: 36px; }
+.material-icons-outlined.md-48 { font-size: 48px; }
 
 
 img {
@@ -121,11 +121,16 @@ img {
   display: block;
   text-align: center;
   font-size: 1.5em;
-  margin-top: 32px;
+  margin-top: 24px;
   margin-right: 24px;
   color: white;
   text-decoration: none;
   text-align: right;
+  font-family: var(--main-font);
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 24px;
 }
 
 .menuItem:hover {
@@ -135,7 +140,7 @@ img {
 .hamburger {
   z-index: 99;
   margin-right: 24px;
-  margin-top: 12px;
+  margin-top: 16px;
   cursor: pointer;
   color: var(--white);
   border: none;
@@ -149,12 +154,13 @@ header img {
   height: 32px;
   width: 155px;
   margin-left: 24px;
-  margin-top: 8px;
+  margin-top: 12px;
   z-index: 99;
 }
 
 .menu {
   position: fixed;
+  height: fit-content;
   transform: translateY(-100%);
   transition: transform 0.4s;
   top: 0;
@@ -166,7 +172,8 @@ header img {
   text-align: right;
   color: white;
   list-style: none;
-  padding-top: 10px;
+  padding-top: 32px;
+  padding-bottom: 16px;
 }
 
 .showMenu {
