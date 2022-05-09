@@ -229,12 +229,14 @@
       
       <div class="search input-container">
         <label for="search" class="xsmall-text">Søg efter medlemmer</label>
-        <input type="search" placeholder="Søg" class="input" onkeyup="search(this.value)" onsearch="search('')">
+        <input type="search" placeholder="Søg" class="search-input" onkeyup="search(this.value)" onsearch="search('')">
       </div>
 
-      <div class="filter">
+      <div class="filter-section">
+      <p class="xsmall-text">Filtre</p>
+      <div class="filter-container">
                 <label for="filterParti">
-                    <select id="filterParti" onchange="filterParti(this.value)">
+                    <select id="filterParti" class="filterUI" onchange="filterParti(this.value)">
                         <option value="all" selected>Alle partier</option>
                         <option value="Socialdemokratiet (A)">Socialdemokratiet (A)</option>
                         <option value="Konservative Folkeparti (C)">Konservative Folkeparti (C)</option>
@@ -257,6 +259,7 @@
                     </select>
               </label>
       </div>
+    </div>
 
       <article id="medlemmer-container">
       </article>

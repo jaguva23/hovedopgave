@@ -43,7 +43,7 @@ h1 {
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
-  line-height: 28px;
+  line-height: 32px;
   color: var(--darkblue);
 }
 
@@ -61,7 +61,6 @@ h2 {
 
 h3 {
   font-weight: 400;
-  letter-spacing: 0.05em;
   margin: 0.5em 0 0.2em;
 }
 
@@ -208,25 +207,64 @@ header img {
   flex-direction: row;
   align-items: center;
   height: 16px;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 
 .input-container {
   margin-top: 32px;
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 100%;
 }
 
-.filter {
-  margin-top: 32px;
+.filter-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+.filter-container {
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 8px; 
+  grid-template-areas: 
+    ". ."; 
+  width: 100%;
+}
+
+#filterParti {
+  width: 100%;
+  font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+}
+
+#filterUdvalg {
+  width: 100%;
+  font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+}
+
+select {
+  display: flex;
+flex-direction: row;
+align-items: center;
+padding: 8px;
+border: 1px solid #003253;
+border-radius: 4px;
 }
 
 
-.input {
+
+.search-input {
   border: 1px solid #003253;
 border-radius: 4px;
 height: 40px;
+width: 100%;
 padding: 8px;
 }
 
@@ -241,7 +279,7 @@ padding-left: 8px;
 /*--------------Forsiden----------*/ 
 
 .main-container {
-  padding: 64px 24px 24px 24px;
+  padding: 72px 24px 24px 24px;
 }
 
 .title h1 {
@@ -399,10 +437,34 @@ height: 96px;
   width: 100%;
 }
 
-.politiker-kort-tekst {
-  padding: 8px;
-  background-color: var(--white);
+.poltiker-kort-titel-logo img {
+  width: 80px;
+  height: 80px;
+  margin-top: -40px;
+  margin-right: 8px;
 }
+
+.poltiker-kort-titel-logo {
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+}
+
+.politiker-kort-tekst {
+  padding-bottom: 16px;
+  padding-left: 24px;
+  background-color: var(--white);
+  width: max-content;
+}
+
+.politiker-kort-tekst h3 {
+  font-family: var(--header-font);
+  font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+}
+
 .politiker-kort-tekst img {
   width: 80px;
   height: 80px;

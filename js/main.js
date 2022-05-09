@@ -58,9 +58,11 @@ function appendMembers(members) {
     html += `
       <article class="politiker-kort">
         <img src="${member.img}"></img>
+        <div class="poltiker-kort-titel-logo">
         <div class="politiker-kort-tekst">
         <h3>${member.name}</h3>
-        <h3>${member.parti}</h3> 
+        <p class="small-text">${member.parti}</p> 
+        </div>
         <img src="${member.partiImg}"></img>
         </div>
     </article>
