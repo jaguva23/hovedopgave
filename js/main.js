@@ -100,3 +100,12 @@ function filterParti(parti) {
   }
 }
 
+function filterUdvalg(udvalg) {
+  let filteredMembers = [];
+  for (let member of memberss) {
+      if (member.udvalg.includes(udvalg)) {
+          filteredMembers.push(member);
+      }
+  }
+  appendMembers(filteredMembers);
+}
