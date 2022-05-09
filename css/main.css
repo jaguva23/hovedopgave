@@ -106,7 +106,7 @@ line-height: 16px;
   font-style: normal;
 font-weight: 400;
 font-size: 10px;
-line-height: 15px;
+line-height: 12px;
 }
 
 .material-icons-outlined.md-18 { font-size: 18px; }
@@ -211,7 +211,28 @@ header img {
   margin-bottom: 32px;
 }
 
+.input-container {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
 
+
+.input {
+  border: 1px solid #003253;
+border-radius: 4px;
+height: 40px;
+padding: 8px;
+}
+
+input::placeholder {
+  font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 18px;
+padding-left: 8px;
+}
 
 /*--------------Forsiden----------*/ 
 
