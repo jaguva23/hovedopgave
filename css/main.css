@@ -70,6 +70,12 @@ h5 {
   letter-spacing: 0.08em;
 }
 
+a {
+  text-decoration: none;
+  color: var(--darkblue);
+}
+
+
 .open-sans-heading {
   font-family: var(--main-font);
   font-style: normal;
@@ -85,6 +91,14 @@ line-height: 24px;
   font-size: 14px;
   line-height: 24px;  
   color: var(--darkblue);
+}
+
+.small-text {
+  font-family: var(--main-font);
+  font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
 }
 
 .xsmall-text {
@@ -127,15 +141,20 @@ img {
   text-decoration: none;
   text-align: right;
   font-family: var(--main-font);
-font-style: normal;
-font-weight: 600;
-font-size: 18px;
-line-height: 24px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+a.menuItem {
+  color: white;
 }
 
 .menuItem:hover {
   text-decoration: underline;
 }
+
 
 .hamburger {
   z-index: 99;
@@ -184,6 +203,14 @@ header img {
   display: none;
 }
 
+.breadcrump {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 16px;
+  margin-bottom: 32px;
+}
+
 
 
 /*--------------Forsiden----------*/ 
@@ -211,6 +238,7 @@ header img {
   margin-top: 8px;
   margin-bottom: 16px;
 }
+
 
 .forside-kort {
   display: flex;

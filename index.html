@@ -25,7 +25,7 @@
   <ul class="menu">
     <li><a class="menuItem" href="#/">Forside</a></li>
     <li><a class="menuItem" href="#/">Dagsordener og referater</a></li>
-    <li><a class="menuItem" href="#/">Medlemmer</a></li>
+    <li><a class="menuItem" href="#/medlemmer">Medlemmer</a></li>
     <li><a class="menuItem" href="#/">Udvalg</a></li>
     <li><a class="menuItem" href="#/">Kategorier</a></li>
     <li><a class="menuItem" href="#/">Abonnement</a></li>
@@ -48,7 +48,9 @@
 </header>
 
 <body>
-  <section class="main-container" >
+  <!--Sider -->
+    <!--Forside-->
+  <section id="forside" class="main-container page">
     <article class="title">
       <h1>Politiskportal</h1>
       <p class="body-text">Her kan du finde og søge efter dagsordener, referater, mødekalender, udvalg, medlemmer, emner, samt sammensætte et abonnement efter dine interesser.</p>
@@ -62,12 +64,12 @@
           </span>
           <p class="forside-kort-titel"> Dagsordener og referater</p>
         </div>
-        <div class="forside-kort">
+        <a href="#/medlemmer"> <div class="forside-kort">
           <span class="material-icons-outlined md-48">
             groups
             </span>
             <p class="forside-kort-titel"> Byrådets medlemmer</p>
-        </div>
+        </div> </a>
         <div class="forside-kort">
           <span class="material-icons-outlined md-48">
             group
@@ -215,9 +217,22 @@
       </div>
     </article>
   </section>
+
+  <!--Medlemmer-->
+  <section id="medlemmer" class="main-container page">
+    <div class="breadcrump"> <a href ="#/" class="small-text">Forside</a> <span class="material-icons-outlined">
+      chevron_right
+      </span> <a href ="#/medlemmer" class="small-text">Medlemmer</a> </div>
+      <article class="title">
+        <h1>Byrådets medlemmer</h1>
+      </article>
+      
+      <div class="search"> </div>
+    </section>
   
 
-
+<!-- SPA Router functionality  -->
+<script src="js/router.js"></script>
   <!-- main js file -->
   <script src="js/main.js"></script>
 </body>
