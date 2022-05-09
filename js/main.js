@@ -27,6 +27,8 @@ menuItems.forEach(function (menuItem) {
 
 
 //-----------------medlemmer i byrådet------------------------------//
+let _members = [];
+
 async function fetchJson() {
   const url = "https://api.jsonbin.io/b/6142f99a9548541c29b2fa64/latest";
 
@@ -37,8 +39,8 @@ async function fetchJson() {
       'X-BIN-META': false
     }
   }); // fetch and wait the response
-  let data = await response.json(); // read response body and wait for parsing the JSON
-  appendMembers(data)
+  let _members = await response.json(); // read response body and wait for parsing the JSON
+  appendMembers(_members)
 }
 
 // Appending objects to the DOM
@@ -61,4 +63,16 @@ function appendMembers(members) {
 }
 
 fetchJson();
+
+
+function filterParti(parti) {
+  if (parti == "all") {
+      appendMembers(_members);
+  } else {
+      const results = _members.filter(member => member.parti === parti);
+      console.log(results);
+      appendMembers(results);
+  }
+}
+
 
