@@ -229,13 +229,13 @@
       
       <div class="search input-container">
         <label for="search" class="xsmall-text">Søg efter medlemmer</label>
-        <input type="search" placeholder="Søg" class="input" onkeyup="search(this.value)">
+        <input type="search" placeholder="Søg" class="input" onkeyup="search(this.value)" onsearch="search('')">
       </div>
 
       <div class="filter">
                 <label for="filterParti">
                     <select id="filterParti" onchange="filterParti(this.value)">
-                        <option value="all" selected>Parti</option>
+                        <option value="all" selected>Alle partier</option>
                         <option value="Socialdemokratiet">Socialdemokratiet (A)</option>
                         <option value="Konservative">Konservative (C)</option>
                         <option value="Radikale Venstre">Radikale Venstre (B)</option>

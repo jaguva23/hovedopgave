@@ -29,26 +29,33 @@ menuItems.forEach(function (menuItem) {
 //-----------------medlemmer i byrådet------------------------------//
 let _members = [];
 
-async function fetchJson() {
-  const url = "https://api.jsonbin.io/b/6142f99a9548541c29b2fa64/latest";
+async function initApp() {
+  await fetchMembers();
+  appendMembers(_members);
+}
 
+initApp();
+
+async function fetchMembers() {
+  const url = "https://api.jsonbin.io/b/6142f99a9548541c29b2fa64/latest";
   const response = await fetch(url, {
     headers: {
       "X-Master-Key": "$2b$10$vGHTPb1qPoMnA5nd16KFXOh7e8LSw3f.wWjmqNPtcxfbWSXLgQWTS",
       "Content-Type": "application/json",
       'X-BIN-META': false
     }
-  }); // fetch and wait the response
-  let _members = await response.json(); // read response body and wait for parsing the JSON
-  appendMembers(_members)
+  });
+  const data = await response.json();
+  console.log(data);
+  _members = data;
 }
 
-// Appending objects to the DOM
+
+// Appending medlemmer til DOMen
 function appendMembers(members) {
   let html = "";
   for (let member of members) {
-    console.log(member);
-    html += /*html*/`
+    html += `
       <article class="politiker-kort">
         <img src="${member.img}"></img>
         <div class="politiker-kort-tekst">
@@ -62,11 +69,37 @@ function appendMembers(members) {
   document.querySelector("#medlemmer-container").innerHTML = html;
 }
 
-fetchJson();
+function search(value) {
+  value = value.toLowerCase();
+  const results = _members.filter(user => {
+      const name = member.name.toLowerCase();
+      if (name.includes(value)) {
+          return member;
+      }
+  });
+  appendMembers(results);
+}
+
+//search for user//
+function search(value) {
+  value = value.toLowerCase();
+  console.log(value);
+
+  let results = [];
+  let members = _members;
+
+  for (const member of members) {
+    let model = member.name.toLowerCase();
+    if (model.includes(value)) {
+      results.push(member);
+    }
+  }
+  appendMembers(results);
+}
 
 
 function filterParti(parti) {
-  if (parti == "all") {
+  if (parti === "all") {
       appendMembers(_members);
   } else {
       const results = _members.filter(member => member.parti === parti);
@@ -74,5 +107,4 @@ function filterParti(parti) {
       appendMembers(results);
   }
 }
-
 
