@@ -69,16 +69,6 @@ function appendMembers(members) {
   document.querySelector("#medlemmer-container").innerHTML = html;
 }
 
-function search(value) {
-  value = value.toLowerCase();
-  const results = _members.filter(user => {
-      const name = member.name.toLowerCase();
-      if (name.includes(value)) {
-          return member;
-      }
-  });
-  appendMembers(results);
-}
 
 //search for user//
 function search(value) {
