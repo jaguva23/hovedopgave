@@ -114,6 +114,7 @@ function filterUdvalg(udvalg) {
 }
 
 
+
 function showMember(id) {
   const memberToShow = _members.find((member) => member.id === id);
   navigateTo("#/medlemsprofil");
@@ -124,25 +125,48 @@ function showMember(id) {
     </span> <a href ="#/medlemmer" class="small-text">Medlemmer</a> <span class="material-icons-outlined">
       chevron_right
       </span> <p class="small-text">${memberToShow.name}</p> </div>
-      <article>
+      <article class="medlemsprofil">
       <div class="member-profile-container">
       <div class ="member-profile-pic">
     <img class="member-img" src="${memberToShow.img}">
     <img class="parti-img" src="${memberToShow.partiImg}">
     </div>
     <div class="member-profile-titles">
-    <div class="member-profile-titles-text">
+      <div class="member-profile-titles-text">
       <h1>${memberToShow.name}</h1>
       <p class ="xsmall-text">${memberToShow.parti}</p>
       </div>
       <button class="abonner-btn">Abonner</button>
-      </div>
-      </div>  
+    </div>
+    </div>
+    <div class="accordions-container">
+    <button onclick="openAcc()" class="accordion">Titel</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+    </div>
     </article>
   `;
+}
+
+function openAcc() {
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+  
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
 }
 
 
 
 
-  
+
