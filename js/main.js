@@ -99,12 +99,21 @@ function filterParti(parti) {
   }
 }
 
+
 function filterUdvalg(udvalg) {
-  let inUdvalg = _members.udvalg.includes(udvalg.value);
-  if (inUdvalg) {
-    console.log(udvalg.value);
+  let filteredMembers = [];
+  let members = _members;
+  for (let member of members) {
+      if (member.udvalg.includes(udvalg)) {
+          filteredMembers.push(member);
+      }
   }
+  console.log(filteredMembers);
+  appendMembers(filteredMembers);
 }
+
+
+
 
 
 
