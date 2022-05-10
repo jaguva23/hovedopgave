@@ -108,7 +108,6 @@ function filterUdvalg(udvalg) {
           filteredMembers.push(member);
       }
   }
-  console.log(filteredMembers);
   appendMembers(filteredMembers);
 }
 
