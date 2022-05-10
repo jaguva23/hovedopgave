@@ -100,13 +100,10 @@ function filterParti(parti) {
 }
 
 function filterUdvalg(udvalg) {
-  if (udvalg === "alle-udvalg") {
-    appendMembers(_members);
-} else {
-    const results = _members.filter(member => member.udvalg === udvalg);
-    console.log(results);
-    appendMembers(results);
-}
+  let inUdvalg = _members.udvalg.includes(udvalg.value);
+  if (inUdvalg) {
+    console.log(udvalg.value);
+  }
 }
 
 
