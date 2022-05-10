@@ -5,7 +5,7 @@
 const _routes = {
   "#/": "forside",
   "#/medlemmer": "medlemmer",
-  "#/member-details": "medlemsside"
+  "#/medlemsprofil": "medlemsprofil"
 };
 const _pages = document.querySelectorAll(".page");
 const _basePath = location.pathname.replace("index.html", ""); // remove index.html from path
@@ -21,6 +21,14 @@ function hideAllPages() {
 }
 
 /**
+ * Displaying page by given path
+ */
+ function showPage(path) {
+  hideAllPages(); // hide all pages
+  document.querySelector(`#${_routes[path]}`).style.display = "block"; // show page by given path
+}
+
+/**
  * Navigating SPA to specific page by given path
  */
 function navigateTo(path) {
@@ -28,28 +36,9 @@ function navigateTo(path) {
   showPage(path);
 }
 
-/**
- * Displaying page by given path
- */
-function showPage(path) {
-  hideAllPages(); // hide all pages
-  document.querySelector(`#${_routes[path]}`).style.display = "block"; // show page by given path
-  setActiveTab(path);
-  window.scrollTo(0, 0);
-}
 
-/**
- * sets active menu item by given path
- */
-function setActiveTab(path) {
-  for (const link of _navLinks) {
-    if (path === link.getAttribute("href")) {
-      link.classList.add("active");
-    } else {
-      link.classList.remove("active");
-    }
-  }
-}
+
+
 
 /**
  * Attaching event to nav links and preventing default anchor link event

@@ -116,12 +116,21 @@ function filterUdvalg(udvalg) {
 
 function showMember(id) {
   const memberToShow = _members.find((member) => member.id === id);
-  navigateTo("member-details");
-  document.querySelector("#member-details .title").innerHTML = memberToShow.name;
+  navigateTo("#/medlemsprofil");
+  console.log(memberToShow.name);
   document.querySelector("#member-details-container").innerHTML = /*html*/ `
-    <article>
-    <img src="${memberToShow.img}">
-      <h2>${memberToShow.name}</h2>
+    <div class="breadcrump"> <a href ="#/" class="small-text">Forside</a> <span class="material-icons-outlined">
+    chevron_right
+    </span> <a href ="#/medlemmer" class="small-text">Medlemmer</a> <span class="material-icons-outlined">
+      chevron_right
+      </span> <p class="small-text">${memberToShow.name}</p> </div>
+      <article>
+      <div class ="member-profile-pic-container">
+    <img class="member-img" src="${memberToShow.img}">
+    <img class="parti-img" src="${memberToShow.partiImg}">
+    </div>
+      <h3>${memberToShow.name}</h3>
+      <p>${memberToShow.parti}</p>
     </article>
   `;
 }
