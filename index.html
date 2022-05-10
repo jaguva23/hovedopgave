@@ -248,14 +248,14 @@
                     </select>
                 </label>
                 <label for="filterUdvalg">
-                  <select id="filterUdvalg">
-                      <option value="all" selected>Udvalg</option>
+                  <select id="filterUdvalg" onchange="filterUdvalg(this.value)">
+                      <option value="alle-udvalg" selected>Udvalg</option>
                       <option value="boern-og-unge">Børn- og ungeudvalget</option>
                       <option value="kultur">Kulturudvalget</option>
                       <option value="social-og-beskaeftigelse">Social- og beskæftigelsesudvalget</option>
                       <option value="sundhed-og-omsorg">Sundheds- og omsorgsudvalget</option>
                       <option value="teknisk">Tekniskudvalget</option>
-                      <option onclick="filterUdvalg('Økonomi')">Økonomiudvalget</option>
+                      <option value="økonomi">Økonomiudvalget</option>
                     </select>
               </label>
       </div>

@@ -75,7 +75,6 @@ function appendMembers(members) {
 //search for user//
 function search(value) {
   value = value.toLowerCase();
-  console.log(value);
 
   let results = [];
   let members = _members;
@@ -101,11 +100,16 @@ function filterParti(parti) {
 }
 
 function filterUdvalg(udvalg) {
-  let filteredMembers = [];
-  for (let member of memberss) {
-      if (member.udvalg.includes(udvalg)) {
-          filteredMembers.push(member);
-      }
-  }
-  appendMembers(filteredMembers);
+  if (udvalg === "alle-udvalg") {
+    appendMembers(_members);
+} else {
+    const results = _members.filter(member => member.udvalg === udvalg);
+    console.log(results);
+    appendMembers(results);
 }
+}
+
+
+
+
+  
