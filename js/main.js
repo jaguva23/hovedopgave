@@ -57,6 +57,7 @@ function appendMembers(members) {
   for (let member of members) {
     html += `
       <article class="politiker-kort">
+      <div onclick="showMember(${member.id})">
         <img src="${member.img}"></img>
         <div class="poltiker-kort-titel-logo">
         <div class="politiker-kort-tekst">
@@ -65,7 +66,8 @@ function appendMembers(members) {
         </div>
         <img src="${member.partiImg}"></img>
         </div>
-    </article>
+        </div>
+        </article>
         `;
   }
   document.querySelector("#medlemmer-container").innerHTML = html;
@@ -112,7 +114,17 @@ function filterUdvalg(udvalg) {
 }
 
 
-
+function showMember(id) {
+  const memberToShow = _members.find((member) => member.id === id);
+  navigateTo("member-details");
+  document.querySelector("#member-details .title").innerHTML = memberToShow.name;
+  document.querySelector("#member-details-container").innerHTML = /*html*/ `
+    <article>
+    <img src="${memberToShow.img}">
+      <h2>${memberToShow.name}</h2>
+    </article>
+  `;
+}
 
 
 

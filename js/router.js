@@ -4,7 +4,8 @@
  */
 const _routes = {
   "#/": "forside",
-  "#/medlemmer": "medlemmer"
+  "#/medlemmer": "medlemmer",
+  "#/member-details": "medlemsside"
 };
 const _pages = document.querySelectorAll(".page");
 const _basePath = location.pathname.replace("index.html", ""); // remove index.html from path
