@@ -125,12 +125,19 @@ function showMember(id) {
       chevron_right
       </span> <p class="small-text">${memberToShow.name}</p> </div>
       <article>
-      <div class ="member-profile-pic-container">
+      <div class="member-profile-container">
+      <div class ="member-profile-pic">
     <img class="member-img" src="${memberToShow.img}">
     <img class="parti-img" src="${memberToShow.partiImg}">
     </div>
-      <h3>${memberToShow.name}</h3>
-      <p>${memberToShow.parti}</p>
+    <div class="member-profile-titles">
+    <div class="member-profile-titles-text">
+      <h1>${memberToShow.name}</h1>
+      <p class ="xsmall-text">${memberToShow.parti}</p>
+      </div>
+      <button class="abonner-btn">Abonner</button>
+      </div>
+      </div>  
     </article>
   `;
 }
