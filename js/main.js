@@ -62,7 +62,7 @@ function appendMembers(members) {
         <div class="poltiker-kort-titel-logo">
         <div class="politiker-kort-tekst">
         <h3>${member.name}</h3>
-        <p class="small-text">${member.parti}</p> 
+        <p class="small-text">${member.titel}, ${member.parti}</p>
         </div>
         <img src="${member.partiImg}"></img>
         </div>
@@ -115,10 +115,12 @@ function filterUdvalg(udvalg) {
 
 
 
+
+
+
 function showMember(id) {
   const memberToShow = _members.find((member) => member.id === id);
   navigateTo("#/medlemsprofil");
-  console.log(memberToShow.name);
   document.querySelector("#member-details-container").innerHTML = /*html*/ `
     <div class="breadcrump"> <a href ="#/" class="small-text">Forside</a> <span class="material-icons-outlined">
     chevron_right
@@ -133,12 +135,14 @@ function showMember(id) {
     </div>
     <div class="member-profile-titles">
       <div class="member-profile-titles-text">
-      <h1>${memberToShow.name}</h1>
-      <p class ="xsmall-text">${memberToShow.parti}</p>
+      <p class="member-profile-name">${memberToShow.name}</p>
+      <p class ="small-text">${memberToShow.titel},</p>
+      <p class ="small-text">${memberToShow.parti}</p>
       </div>
       <button class="abonner-btn">Abonner</button>
     </div>
     </div>
+    <p class="member-bio">${memberToShow.bio}</p>
     <div class="accordions-container">
         <div class="accordion-item">
           <button onclick="toggleAcc(this)" class="accordion">Medlem af</button>
@@ -207,10 +211,12 @@ function showMember(id) {
             </div>
         </div>
 
+        <img src="/
 
     </div>
     </article>
   `;
+  window.scrollTo(0, 0);
 }
 
 
@@ -227,7 +233,5 @@ function toggleAcc(item) {
   }
   return false
 }
-
-
 
 
