@@ -58,13 +58,13 @@ function appendMembers(members) {
     html += `
       <article class="politiker-kort">
       <div onclick="showMember(${member.id})">
-        <img src="${member.img}"></img>
+        <img src="${member.img}" class="poltiker-img" alt="Billede af ${member.name}" ></img>
         <div class="poltiker-kort-titel-logo">
         <div class="politiker-kort-tekst">
         <h3>${member.name}</h3>
         <p class="small-text">${member.titel}, ${member.parti}</p>
         </div>
-        <img src="${member.partiImg}"></img>
+        <img src="${member.partiImg}" alt="Billede af ${member.parti} logo"></img>
         </div>
         </div>
         </article>
@@ -130,8 +130,8 @@ function showMember(id) {
       <article class="medlemsprofil">
       <div class="member-profile-container">
       <div class ="member-profile-pic">
-    <img class="member-img" src="${memberToShow.img}">
-    <img class="parti-img" src="${memberToShow.partiImg}">
+    <img class="member-img" src="${memberToShow.img}" alt="Billede af ${member.name}">
+    <img class="parti-img" src="${memberToShow.partiImg}" alt="Billede af ${member.parti} logo">
     </div>
     <div class="member-profile-titles">
       <div class="member-profile-titles-text">
