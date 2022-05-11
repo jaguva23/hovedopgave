@@ -70,7 +70,7 @@ function appendMembers(members) {
         </article>
         `;
   }
-  document.querySelector("#medlemmer-container").innerHTML = html;
+  document.querySelector("#medlemmer-container").innerHTML = "Medlemmer" + html;
 }
 
 
@@ -82,8 +82,8 @@ function search(value) {
   let members = _members;
 
   for (const member of members) {
-    let model = member.name.toLowerCase();
-    if (model.includes(value)) {
+    let memberName = member.name.toLowerCase();
+    if (memberName.includes(value)) {
       results.push(member);
     }
   }
@@ -211,7 +211,7 @@ function showMember(id) {
             </div>
         </div>
 
-        <img src="/
+        <img src="/img/embeddedFeeds.png"> 
 
     </div>
     </article>
