@@ -140,32 +140,93 @@ function showMember(id) {
     </div>
     </div>
     <div class="accordions-container">
-    <button onclick="openAcc()" class="accordion">Titel</button>
-<div class="panel">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
+        <div class="accordion-item">
+          <button onclick="toggleAcc(this)" class="accordion">Medlem af</button>
+            <div class="panel">
+              <div class ="panel-item-container">
+              <p class="panel-item">Byrådet</p>
+              <p class="panel-item">Økonomiudvalget</p>
+              <p class="panel-item">Børne- og ungeudvalget</p>
+              </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+          <button onclick="toggleAcc(this)" class="accordion">Mødedeltagelse</button>
+            <div class="panel">
+              <div class ="panel-item-container">
+                <div class="panel-item-flex"> <p class="panel-item">05.04.22 &nbsp; Byrådet</p> <p class="panel-item">Deltog</p></div>
+                <div class="panel-item-flex"> <p class="panel-item">03.04.22 &nbsp; Børne- og ungeudvalget</p> <p class="panel-item">Fraværende</p></div>
+                <div class="panel-item-flex"> <p class="panel-item">07.03.22 &nbsp; Økonomiudvalget</p> <p class="panel-item">Deltog</p></div>
+                <div class="panel-item-flex"> <p class="panel-item">Se alle</p> <p class="panel-item"><span class="material-icons">
+                chevron_right
+                </span></p></div>
+              </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+          <button onclick="toggleAcc(this)" class="accordion">Seneste forslag</button>
+            <div class="panel">
+              <div class ="panel-item-container">
+              <div class="panel-item-flex"> <p class="panel-item">05.04.22 &nbsp; Byrådet</p> <p class="panel-item">Tillægsforslag</p></div>
+              <div class="panel-item-flex"> <p class="panel-item">05.04.22 &nbsp; Byrådet</p> <p class="panel-item">Ændringsforslag</p></div>
+              <div class="panel-item-flex"> <p class="panel-item">07.03.22 &nbsp; Økonomiudvalget</p> <p class="panel-item">Tillægsforslag</p></div>
+              <div class="panel-item-flex"> <p class="panel-item">Se alle</p> <p class="panel-item"><span class="material-icons">
+              chevron_right
+              </span></p></div>
+              </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+          <button onclick="toggleAcc(this)" class="accordion">Afgivne stemmer</button>
+            <div class="panel">
+              <div class ="panel-item-container">
+              <div class="panel-item-flex"> <p class="panel-item">05.04.22 &nbsp; Byrådet</p> <p class="panel-item">Antal: 22</p></div>
+              <div class="panel-item-flex"> <p class="panel-item">21.03.22 &nbsp; Børne- og ungeudvalget</p> <p class="panel-item">Antal: 7</p></div>
+              <div class="panel-item-flex"> <p class="panel-item">07.03.22 &nbsp; Økonomiudvalget</p> <p class="panel-item">Antal: 15</p></div>
+              <div class="panel-item-flex"> <p class="panel-item">Se alle</p> <p class="panel-item"><span class="material-icons">
+              chevron_right
+              </span></p></div>
+              </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+          <button onclick="toggleAcc(this)" class="accordion">På talerlisten</button>
+            <div class="panel">
+              <div class ="panel-item-container">
+              <div class="panel-item-flex"> <p class="panel-item">05.04.22 &nbsp; Byrådet</p> <p class="panel-item">Punkt 3</p></div>
+              <div class="panel-item-flex"> <p class="panel-item">21.03.22 &nbsp; Børne- og ungeudvalget</p> <p class="panel-item">Punkt 5</p></div>
+              <div class="panel-item-flex"> <p class="panel-item">07.03.22 &nbsp; Økonomiudvalget</p> <p class="panel-item">Punkt 11</p></div>
+              <div class="panel-item-flex"> <p class="panel-item">Se alle</p> <p class="panel-item"><span class="material-icons">
+              chevron_right
+              </span></p></div>
+              </div>
+            </div>
+        </div>
+
+
     </div>
     </article>
   `;
 }
 
-function openAcc() {
-  var acc = document.getElementsByClassName("accordion");
-  var i;
-  
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var panel = this.nextElementSibling;
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
-        panel.style.display = "block";
-      }
-    });
-  }
-}
 
+//-----------------https://stackoverflow.com/questions/61585166/accordion-with-pure-javascript-only-work-with-double-click--------//
+function toggleAcc(item) {
+  item.classList.toggle("active");
+  let panel = item.nextElementSibling;
+  if(panel!==null) {
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  }
+  return false
+}
 
 
 
