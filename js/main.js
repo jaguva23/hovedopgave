@@ -130,8 +130,8 @@ function showMember(id) {
       <article class="medlemsprofil">
       <div class="member-profile-container">
       <div class ="member-profile-pic">
-    <img class="member-img" src="${memberToShow.img}" alt="Billede af ${member.name}">
-    <img class="parti-img" src="${memberToShow.partiImg}" alt="Billede af ${member.parti} logo">
+    <img class="member-img" src="${memberToShow.img}" alt="Billede af ${memberToShow.name}">
+    <img class="parti-img" src="${memberToShow.partiImg}" alt="Billede af ${memberToShow.parti} logo">
     </div>
     <div class="member-profile-titles">
       <div class="member-profile-titles-text">
