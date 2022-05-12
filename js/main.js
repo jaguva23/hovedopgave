@@ -115,10 +115,21 @@ function filterUdvalg(udvalg) {
   displayFilter(udvalg);
 }
 
+function resetFilter() {
+  appendMembers(_members);
+  displayFilter();
+}
 
 function displayFilter(filter) {
-  document.querySelector("#selected-filter").innerHTML = filter ? `i ${filter}` : "";
+  if(filter === "Byrådet") {
+    resetFilter()
+  } else {
+    document.querySelector("#selected-filter").innerHTML = filter ? `i ${filter}` : "";
+  }
 }
+
+
+
 
 
 
