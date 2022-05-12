@@ -29,20 +29,19 @@ menuItems.forEach(function (menuItem) {
 //-----------------medlemmer i byrådet------------------------------//
 let _members = [];
 
-async function initApp() {
+async function initializeSite() {
   await fetchMembers();
   appendMembers(_members);
 }
 
-initApp();
+initializeSite();
 
 async function fetchMembers() {
   const url = "https://api.jsonbin.io/b/6142f99a9548541c29b2fa64/latest";
   const response = await fetch(url, {
     headers: {
       "X-Master-Key": "$2b$10$vGHTPb1qPoMnA5nd16KFXOh7e8LSw3f.wWjmqNPtcxfbWSXLgQWTS",
-      "Content-Type": "application/json",
-      'X-BIN-META': false
+      "Content-Type": "application/json"
     }
   });
   const data = await response.json();
