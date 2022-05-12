@@ -200,14 +200,14 @@ header img {
   flex-direction: row;
   align-items: center;
   height: 16px;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   font-weight: 400;
 font-size: 12px;
 line-height: 16px;
 }
 
 .input-container {
-  margin-top: 32px;
+  margin-top: 24px;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -337,7 +337,9 @@ line-height: 16px;
 text-align: center;
 }
 
-
+.video-section {
+  margin-bottom: 32px;
+}
 
 .video-section-titel {
   display: flex;

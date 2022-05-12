@@ -96,7 +96,6 @@ function filterParti(parti) {
       appendMembers(_members);
   } else {
       const results = _members.filter(member => member.parti === parti);
-      console.log(results);
       appendMembers(results);
       displayFilter(parti);
   }
@@ -127,10 +126,6 @@ function displayFilter(filter) {
     document.querySelector("#selected-filter").innerHTML = filter ? `i ${filter}` : "";
   }
 }
-
-
-
-
 
 
 
