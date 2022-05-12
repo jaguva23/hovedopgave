@@ -70,7 +70,7 @@ function appendMembers(members) {
         </article>
         `;
   }
-  document.querySelector("#medlemmer-container").innerHTML = "Medlemmer" + html;
+  document.querySelector("#medlemmer-container").innerHTML = html;
 }
 
 
@@ -98,6 +98,7 @@ function filterParti(parti) {
       const results = _members.filter(member => member.parti === parti);
       console.log(results);
       appendMembers(results);
+      displayFilter(parti);
   }
 }
 
@@ -111,9 +112,13 @@ function filterUdvalg(udvalg) {
       }
   }
   appendMembers(filteredMembers);
+  displayFilter(udvalg);
 }
 
 
+function displayFilter(filter) {
+  document.querySelector("#selected-filter").innerHTML = filter ? `i ${filter}` : "";
+}
 
 
 

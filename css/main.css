@@ -489,6 +489,10 @@ line-height: 32px;
   height: 80px;
 }
 
+.display-filter {
+  margin-top: 32px;
+}
+
 #medlemmer-container {
   margin-top: 16px;
   font-style: normal;
