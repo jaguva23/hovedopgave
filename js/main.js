@@ -135,7 +135,7 @@ function showMember(id) {
     </div>
     <div class="member-profile-titles">
       <div class="member-profile-titles-text">
-      <p class="member-profile-name">${memberToShow.name}</p>
+      <h1 class="member-profile-name">${memberToShow.name}</h1>
       <p class ="small-text">${memberToShow.titel},</p>
       <p class ="small-text">${memberToShow.parti}</p>
       </div>
@@ -211,8 +211,35 @@ function showMember(id) {
             </div>
         </div>
 
-        <img src="/img/embeddedFeeds.png"> 
+      <div class="some-channels-container"> 
+      <h3 class="open-sans-heading">Sociale medier</h3>
+        <div class="accordion-item">
+        <div class="some-container">
+             <div class="member-some-content">
+              <img class="member-some-img" src="${memberToShow.img}" alt="Billede af ${memberToShow.name}">
+             <div class="member-some-tekst-container">
+              <p class="xsmall-text">${memberToShow.name}</p>
+              <p class="xsmall-text">3772 synes godt om</p>
+             </div>
+             </div>
+             <img src="img/icons8-facebook.svg" alt="facebook logo">
+          </div>
+      </div>
+    </div>
 
+    <div class="some-item accordion-item">
+        <div class="some-container">
+             <div class="member-some-content">
+              <img class="member-some-img" src="${memberToShow.img}" alt="Billede af ${memberToShow.name}">
+             <div class="member-some-tekst-container">
+              <p class="xsmall-text">${memberToShow.name}</p>
+              <p class="xsmall-text">2423 følgere</p>
+             </div>
+             </div>
+             <img src="img/icons8-instagram.svg" alt="facebook logo">
+          </div>
+      </div>
+    </div>
     </div>
     </article>
   `;
