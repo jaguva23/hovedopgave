@@ -118,7 +118,7 @@ function displayFilter(filter) {
   if(filter === "Byrådet") {
     resetFilter()
   } else {
-    document.querySelector("#selected-filter").innerHTML = filter ? `i ${filter}` : "";
+    document.querySelector("#selected-filter").innerHTML = `i ${filter}`;
   }
 }
 
