@@ -91,9 +91,14 @@ function search(value) {
 
 
 function filterParti(parti) {
+  if (parti === "Byrådet") {
+      appendMembers(_members);
+      displayFilter();
+  } else {
       const results = _members.filter(member => member.parti === parti);
       appendMembers(results);
       displayFilter(parti);
+  }
 }
 
 
@@ -118,7 +123,7 @@ function displayFilter(filter) {
   if(filter === "Byrådet") {
     resetFilter()
   } else {
-    document.querySelector("#selected-filter").innerHTML = `i ${filter}`;
+    document.querySelector("#selected-filter").innerHTML = filter ? `i ${filter}` :"";
   }
 }
 
