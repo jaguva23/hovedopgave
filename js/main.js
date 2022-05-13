@@ -73,6 +73,7 @@ function appendMembers(members) {
 }
 
 
+
 function search(value) {
   value = value.toLowerCase();
 
@@ -90,13 +91,9 @@ function search(value) {
 
 
 function filterParti(parti) {
-  if (parti === "all") {
-      appendMembers(_members);
-  } else {
       const results = _members.filter(member => member.parti === parti);
       appendMembers(results);
       displayFilter(parti);
-  }
 }
 
 
