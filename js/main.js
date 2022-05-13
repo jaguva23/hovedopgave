@@ -73,7 +73,6 @@ function appendMembers(members) {
 }
 
 
-//search for user//
 function search(value) {
   value = value.toLowerCase();
 
