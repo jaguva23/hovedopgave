@@ -48,8 +48,12 @@ h1 {
 }
 
 h2 {
-  font-weight: 400;
-  margin: 0.5em 0 0.2em;
+  font-family: var(--header-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--darkblue);
 }
 
 h3 {
@@ -509,7 +513,9 @@ gap: 24px;
 
 /*-------Medlemmemsside----------*/
 
-
+.hide-text {
+  display: none;
+}
 
 .member-profile-container {
   width: 100%;
@@ -688,4 +694,28 @@ line-height: 24px;
   object-fit: cover;
   display: flex;
   align-self: center;
+}
+
+/*------------------Media querries-----------*/
+@media only screen and (min-width: 768px) {
+  #medlemmer-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    row-gap: 24px;
+    width: 100%;
+  }
+
+  .politiker-kort {
+    width: 268px;
+    background-color: var(--white);
+  }
+
+  .politiker-kort-tekst {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-end;
+  }
 }

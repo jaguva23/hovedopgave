@@ -16,11 +16,11 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Ubuntu:wght@400;700&display=swap"
     rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round"
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Round"
       rel="stylesheet">
 
 </head>
-
+<body>
 <header>
   <ul class="menu">
     <li><a class="menuItem" href="#/">Forside</a></li>
@@ -47,14 +47,14 @@
   </nav>
 </header>
 
-<body>
+
   <!--Sider -->
     <!--Forside-->
   <section id="forside" class="main-container page">
-    <article class="title">
-      <h1>Politiskportal</h1>
+    <div class="title">
+      <h2>Politiskportal</h2>
       <p class="body-text">Her kan du finde og søge efter dagsordener, referater, mødekalender, udvalg, medlemmer, emner, samt sammensætte et abonnement efter dine interesser.</p>
-    </article>
+    </div>
 
     <article class="kort-section">
       <h2 class="open-sans-heading"> Hvad søger du?</h2>
@@ -179,6 +179,7 @@
       </div>
       <p class="body-text">Økonomi</p>
     </div>
+    </div>
     </article>
 
     <article class="aktuelt-section">
@@ -223,14 +224,14 @@
     <div class="breadcrump"> <a href ="#/" class="small-text">Forside</a> <span class="material-icons-outlined">
       chevron_right
       </span> <a href ="#/medlemmer" class="small-text">Medlemmer</a> </div>
-      <article class="title">
-        <h1>Byrådets medlemmer</h1>
+      <div class="title">
+        <h2>Byrådets medlemmer</h2>
         <p class="body-text">Her kan du søge og filtrere blandt alle medlemmer i byrådet.</p>
-      </article>
+      </div>
       
       <div class="search input-container">
         <label for="search" class="xsmall-text">Søg efter medlemmer</label>
-        <input type="search" placeholder="Søg" id="search" class="search-input" onkeyup="search(this.value)" onsearch="search('')">
+        <input type="search" placeholder="Søg" id="search" class="search-input" onkeyup="search(this.value)">
       </div>
 
       <div class="filter-section">
@@ -263,12 +264,13 @@
     </div>
     
     <h3 class="open-sans-heading display-filter">Alle medlemmer <span id="selected-filter"></span></h3>  
-      <article id="medlemmer-container"></article>
+      <div id="medlemmer-container"></div>
     </section>
 
   <!--member detail-->
   <section id="medlemsprofil" class="main-container page">
-    <section id="member-details-container"></section>
+    <h2 class="hide-text">Medlemsprofil</h2>
+    <div id="member-details-container"></div>
   </section>
   
 

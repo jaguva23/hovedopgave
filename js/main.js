@@ -136,8 +136,7 @@ function showMember(id) {
     <div class="breadcrump"> <a href ="#/" class="small-text">Forside</a> <span class="material-icons-outlined">
     chevron_right
     </span> <a href ="#/medlemmer" class="small-text">Medlemmer</a> <span class="material-icons-outlined">
-      chevron_right
-      </span> <p class="small-text">${memberToShow.name}</p> </div>
+      chevron_right</span> <p class="small-text">${memberToShow.name}</p> </div>
       <article class="medlemsprofil">
       <div class="member-profile-container">
       <div class ="member-profile-pic">
@@ -159,9 +158,9 @@ function showMember(id) {
           <button onclick="toggleAcc(this)" class="accordion">Medlem af</button>
             <div class="panel">
               <div class ="panel-item-container">
-              <p class="panel-item">Byrådet</p>
-              <p class="panel-item">Økonomiudvalget</p>
-              <p class="panel-item">Børne- og ungeudvalget</p>
+              <p class="panel-item">${memberToShow.udvalg[0]}</p>
+              <p class="panel-item">${memberToShow.udvalg[1]}</p>
+              <p class="panel-item">${memberToShow.udvalg[2]}</p>
               </div>
             </div>
         </div>
