@@ -45,7 +45,6 @@ async function fetchMembers() {
     }
   });
   const data = await response.json();
-  console.log(data);
   _members = data;
 }
 
