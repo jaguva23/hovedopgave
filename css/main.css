@@ -127,6 +127,7 @@ img {
 }
 
 
+
 .menuItem {
   display: block;
   text-align: center;
@@ -171,6 +172,7 @@ header img {
   margin-left: 24px;
   margin-top: 12px;
   z-index: 99;
+  position: absolute;
 }
 
 .menu {
