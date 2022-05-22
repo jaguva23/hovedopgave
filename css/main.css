@@ -197,9 +197,6 @@ header img {
   transform: translateY(0);
 }
 
-#desktop-menu {
-  display: none;
-}
 
 .breadcrump {
   display: flex;
